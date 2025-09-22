@@ -18,3 +18,4 @@ No terminal do diretório front-end:
 
 npm install           # Instala dependências
 ng serve --open       # Roda o projeto e abre automaticamente no navegador
+
