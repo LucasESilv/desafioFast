@@ -1,0 +1,20 @@
+<div fxLayout="row" fxLayoutGap="16px" style="margin-bottom: 16px;">
+  <mat-form-field class="flex">
+    <mat-label>Colaborador</mat-label>
+    <input matInput [(ngModel)]="filtroColaborador" (input)="emitirFiltros()" />
+  </mat-form-field>
+  <mat-form-field class="flex">
+    <mat-label>Workshop</mat-label>
+    <input matInput [(ngModel)]="filtroWorkshop" (input)="emitirFiltros()" />
+  </mat-form-field>
+  <mat-form-field class="flex">
+    <mat-label>Data de realização</mat-label>
+    <input
+      matInput
+      [matDatepicker]="picker"
+      [(ngModel)]="filtroData"
+      (dateChange)="emitirFiltros()" />
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+</div>

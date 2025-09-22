@@ -1,0 +1,12 @@
+mat-card {
+  min-width: 350px;
+  max-width: 600px;
+  margin: 20px auto;
+}
+mat-card-title {
+  font-size: 1.6rem;
+}
+mat-card-actions {
+  display: flex;
+  justify-content: flex-end;
+}

@@ -1,0 +1,37 @@
+<mat-dialog-content>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>{{ workshop.nome }}</mat-card-title>
+      <mat-card-actions>
+        <button mat-icon-button (click)="fecharDetalhe()" aria-label="Fechar">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        <mat-icon color="primary">event</mat-icon>
+        <strong>Data de realização:</strong>
+        {{ workshop.dataRealizacao | date:'dd/MM/yyyy' }}
+      </p>
+      <p>
+        <mat-icon color="primary">description</mat-icon>
+        <strong>Descrição:</strong>
+        <br>{{ workshop.descricao }}
+      </p>
+      <div>
+        <mat-icon color="primary">group</mat-icon>
+        <strong>Colaboradores presentes:</strong>
+        <div *ngFor="let colab of workshop.colaboradores" class="d-flex align-items-center mb-1">
+          <mat-icon color="accent" class="me-2">person</mat-icon>
+          {{ colab.nome }}
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <button mat-raised-button color="primary" (click)="fecharDetalhe()">
+        <mat-icon>close</mat-icon> Fechar
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</mat-dialog-content>

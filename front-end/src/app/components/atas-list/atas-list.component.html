@@ -1,0 +1,23 @@
+<mat-card class="main-list-card" appearance="outlined">
+  <mat-card-title class="mb-3">
+    <mat-icon color="primary" class="me-2">event_note</mat-icon>
+    Atas dos Workshops
+  </mat-card-title>
+
+  <app-filtros-atas (filtrosChange)="onFiltrosChange($event)"></app-filtros-atas>
+
+  <div *ngFor="let ata of atasFiltradas">
+    <app-ata-card
+      [ata]="ata"
+      (verWorkshop)="abrirDetalheWorkshop(ata.workshop)">
+    </app-ata-card>
+  </div>
+</mat-card>
+
+<app-workshop-detail
+  *ngIf="workshopDetalhe"
+  [workshop]="workshopDetalhe"
+  (fechar)="fecharDetalheWorkshop()">
+</app-workshop-detail>
+
+<app-chart [atas]="atas"></app-chart>d
