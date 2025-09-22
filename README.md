@@ -9,13 +9,16 @@ No projeto foi utilizado o .net 6.0 e o angular 16.0.0, para rodar o projeto é 
 Pré-requisito: .NET 6 SDK.
 No terminal do diretório backend:
 
-dotnet restore         # Instala dependências
-dotnet ef database update   # Cria o banco de dados
-dotnet run            # Inicia a API na porta padrão
+-dotnet restore         # Instala dependências
+
+-dotnet ef database update   # Cria o banco de dados
+
+-dotnet run            # Inicia a API na porta padrão
 
 Pré-requisito: Angular CLI instalado.
 No terminal do diretório front-end:
 
-npm install           # Instala dependências
-ng serve --open       # Roda o projeto e abre automaticamente no navegador
+-npm install           # Instala dependências
+
+-ng serve --open       # Roda o projeto e abre automaticamente no navegador
 
